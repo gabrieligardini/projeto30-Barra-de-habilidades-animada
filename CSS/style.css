@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4070f4;
+}
+
+.skills-container {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 10px;
+}
+
+.skill {
+    margin-bottom: 25px;
+}
+
+.skill-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+.skill-bar {
+    height: 10px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    margin-top: 6px;
+}
+
+.progress {
+    display: block;
+    height: 100%;
+    border-radius: 100px;
+    background: #4070f4;
+    width: 0;
+    animation: fill 0.5s forwards;
+    position: relative;
+    opacity: 0;
+}
+
+.progress.html {
+    width: 90%;
+    animation-delay: 0s;
+}
+
+.progress.css {
+    width: 70%;
+    animation-delay: 0.1s;
+}
+
+.progress.js {
+    width: 50%;
+    animation-delay: 0.2s;
+}
+
+.progress.node {
+    width: 30%;
+    animation-delay: 0.3s;
+}
+
+@keyframes fill {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.percent {
+    position: absolute;
+    right: -10px;
+    top: -25px;
+    background: #4070f4;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.percent::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background: #4070f4;
+    z-index: -1;
+}
